@@ -49,7 +49,7 @@ services:
       - ./drupal11-src:/var/www/html/drupal11:rw
       - drupal11_files_volume:/var/www/html/drupal11/web/sites/default/files
       - drupal11_config_sync_volume:/var/www/html/drupal11/web/sync
-      - ./drupal-data/settings_d11.php:/var/www/html/drupal11/web/sites/default/settings.php
+      - ./drupal-data:/var/www/html/drupal11/web/sites/default
     networks:
       - app_network
     restart: unless-stopped
@@ -67,7 +67,7 @@ services:
     volumes:
       - ./drupal8-src:/var/www/html2/drupal8:rw
       - drupal8_files_volume:/var/www/html2/drupal8/web/sites/default/files
-      - ./drupal-data/settings_d8.php:/var/www/html2/drupal8/web/sites/default/settings.php
+      - ./drupal-data:/var/www/html2/drupal8/web/sites/default
     networks:
       - app_network
     restart: unless-stopped
