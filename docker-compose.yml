@@ -24,7 +24,7 @@ services:
       - "8086:80"  # Akses Drupal 11
       - "8087:81"  # Akses Drupal 8
     volumes:
-      - ./nginx-conf/drupal.conf:/etc/nginx/conf.d/default.conf:ro
+      # - ./nginx-conf/drupal.conf:/etc/nginx/conf.d/default.conf:ro
       - ./drupal11-src:/var/www/html/drupal11:ro
       - ./drupal8-src:/var/www/html2/drupal8:ro
       - drupal11_files_volume:/var/www/html/drupal11/web/sites/default/files
